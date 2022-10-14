@@ -1,6 +1,8 @@
 package AOP;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -20,7 +22,11 @@ public class AOP
 	@Before("execution(* elTiempo())")
 	public void log()
 	{
-		System.out.println("El día actual es: "+LocalDate.now());
+		//Formato de fecha
+	  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yy/MM/dd");  
+      LocalDateTime now = LocalDateTime.now();
+      System.out.println("El día actual es: "+ dtf.format(now));
+
 	}
 	@Around("execution(* elTiempo())")
 	public Object  log1(ProceedingJoinPoint pjp) throws Throwable
