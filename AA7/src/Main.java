@@ -58,7 +58,7 @@ public class Main {
 				JSONParser parse = new JSONParser();
                 JSONObject data_obj = (JSONObject) parse.parse(informacionEnString.toString());
 				System.out.println(data_obj.get("current_weather"));
-				
+
 				String codigo_jenkins = "pipeline \r\n"
 						+ "{\r\n"
 						+ "    agent any\r\n"
@@ -68,7 +68,7 @@ public class Main {
 						+ "    {\r\n"
 						+ "        steps\r\n"
 						+ "        {\r\n"
-						+ "            println(" + (data_obj.get("current_weather")) +") "
+						+ "            println(" + '"'+ (data_obj.get("current_weather")) + '"' + ") "
 						+ "        }\r\n"
 						+ "    }\r\n"
 						+ "    }\r\n"
