@@ -7,7 +7,7 @@ pipeline
     {
         steps
         {
-            println "{"weathercode":61,"temperature":14.9,"windspeed":3.4,"time":"2022-10-18T11:00","winddirection":302.0}" 
+            println({"weathercode":61,"temperature":15.2,"windspeed":8.6,"time":"2022-10-18T12:00","winddirection":292.0}) 
         }
     }
     }
