@@ -57,7 +57,7 @@ public class Main {
 				//Acaba paso 6ª
 				JSONParser parse = new JSONParser();
                 JSONObject data_obj = (JSONObject) parse.parse(informacionEnString.toString());
-				System.out.println(data_obj);
+				System.out.println(data_obj.get("generationtime_ms"));
 				
 				String codigo_jenkins = "pipeline \r\n"
 						+ "{\r\n"
@@ -68,14 +68,15 @@ public class Main {
 						+ "    {\r\n"
 						+ "        steps\r\n"
 						+ "        {\r\n"
-						+ "            println \""+ data_obj +"\" \r\n"
+						+ "            println \""+ data_obj.get("generationtime_ms") +"\" \r\n"
 						+ "        }\r\n"
 						+ "    }\r\n"
 						+ "    }\r\n"
 						+ "}";
 				
-				System.out.println(codigo_jenkins);
 				
+				codigo_jenkins.replace('°','º');
+				System.out.println(codigo_jenkins);
 				String nombreArchivo = "Jenkins";
 				Path archivo = Paths.get(nombreArchivo);
 				
