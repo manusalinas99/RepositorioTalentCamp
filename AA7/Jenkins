@@ -1,4 +1,4 @@
-ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8pipeline 
+pipeline 
 {
     agent any
     stages 
@@ -7,7 +7,7 @@ ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8pipeline
     {
         steps
         {
-            println("{"weathercode":63,"temperature":14.8,"windspeed":7.2,"time":"2022-10-18T12:00","winddirection":273.0}")         }
+            println(weathercode:63,temperature:14.8,windspeed:1.8,time2022-10-18T13:00,winddirection259.0)         }
     }
     }
 }
