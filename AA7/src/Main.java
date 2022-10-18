@@ -76,7 +76,7 @@ public class Main {
 						+ "    {\r\n"
 						+ "        steps\r\n"
 						+ "        {\r\n"
-						+ "            println(" + cadena +  ") "
+						+ "            println(" +'"'+ cadena +'"'+  ") "
 						+ "        }\r\n"
 						+ "    }\r\n"
 						+ "    }\r\n"
