@@ -68,7 +68,7 @@ public class Main {
 						+ "    {\r\n"
 						+ "        steps\r\n"
 						+ "        {\r\n"
-						+ "            println \"" + data_obj.get("current_weather") +"\" \r\n"
+						+ "            println(" + (data_obj.get("current_weather")) +") \n"
 						+ "        }\r\n"
 						+ "    }\r\n"
 						+ "    }\r\n"
