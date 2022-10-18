@@ -7,7 +7,7 @@ pipeline
     {
         steps
         {
-            println(weathercode:63,temperature:14.8,windspeed:1.8,time2022-10-18T13:00,winddirection259.0)         }
+            println("weathercode:63,temperature:14.8,windspeed:1.8,time2022-10-18T13:00,winddirection259.0")         }
     }
     }
 }
