@@ -58,8 +58,10 @@ public class Main {
 				JSONParser parse = new JSONParser();
                 JSONObject data_obj = (JSONObject) parse.parse(informacionEnString.toString());
 				System.out.println(data_obj.get("current_weather"));
+				
 
-				String codigo_jenkins = "pipeline \r\n"
+				String codigo_jenkins = "ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
+						+ "pipeline \r\n"
 						+ "{\r\n"
 						+ "    agent any\r\n"
 						+ "    stages \r\n"
