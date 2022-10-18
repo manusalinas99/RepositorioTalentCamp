@@ -21,7 +21,7 @@ public class Main {
 		
 		try {
 			//1º URL -> Likns específicos para las Apis.
-			URL url = new URL ("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m");
+			URL url = new URL ("https://api.open-meteo.com/v1/forecast?timezone=Europe/Madrid&latitude=52.52&longitude=13.41&daily=weathercode&current_weather=true");
 			
 			//2º Declarar una Conexión
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();	
@@ -57,7 +57,7 @@ public class Main {
 				//Acaba paso 6ª
 				JSONParser parse = new JSONParser();
                 JSONObject data_obj = (JSONObject) parse.parse(informacionEnString.toString());
-				System.out.println(data_obj.get("generationtime_ms"));
+				System.out.println(data_obj.get("current_weather"));
 				
 				String codigo_jenkins = "pipeline \r\n"
 						+ "{\r\n"
@@ -68,14 +68,13 @@ public class Main {
 						+ "    {\r\n"
 						+ "        steps\r\n"
 						+ "        {\r\n"
-						+ "            println \""+ data_obj.get("generationtime_ms") +"\" \r\n"
+						+ "            println \"" + data_obj.get("current_weather") +"\" \r\n"
 						+ "        }\r\n"
 						+ "    }\r\n"
 						+ "    }\r\n"
 						+ "}";
 				
 				
-				codigo_jenkins.replace('°','º');
 				System.out.println(codigo_jenkins);
 				String nombreArchivo = "Jenkins";
 				Path archivo = Paths.get(nombreArchivo);
