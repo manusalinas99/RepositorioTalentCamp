@@ -57,11 +57,17 @@ public class Main {
 				//Acaba paso 6ª
 				JSONParser parse = new JSONParser();
                 JSONObject data_obj = (JSONObject) parse.parse(informacionEnString.toString());
-				System.out.println(data_obj.get("current_weather"));
-				
 
-				String codigo_jenkins = "ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
-						+ "pipeline \r\n"
+				JSONObject data = (JSONObject) data_obj.get("current_weather");
+								
+				String cadena = "weathercode:" + data.get("weathercode").toString()
+						+ ",temperature:"+ data.get("temperature").toString()
+						+",windspeed:"+ data.get("windspeed").toString()
+						+",time"+ data.get("time").toString()
+						+",winddirection"+ data.get("winddirection").toString();
+				System.out.println(cadena);
+				
+				String codigo_jenkins = "pipeline \r\n"
 						+ "{\r\n"
 						+ "    agent any\r\n"
 						+ "    stages \r\n"
@@ -70,7 +76,7 @@ public class Main {
 						+ "    {\r\n"
 						+ "        steps\r\n"
 						+ "        {\r\n"
-						+ "            println(" + '"'+ (data_obj.get("current_weather")) + '"' + ") "
+						+ "            println(" + cadena +  ") "
 						+ "        }\r\n"
 						+ "    }\r\n"
 						+ "    }\r\n"
