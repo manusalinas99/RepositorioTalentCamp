@@ -1,0 +1,27 @@
+Compañía: iberia
+
+Ciudad: BARCELONA
+Turno:  mañana
+Pasajes vendidos: 20000.0
+Pasajeros: 10000.0
+Ganancias netas: 1000000.0€
+
+Ciudad: Buenos Aires
+Turno:  mañana
+Pasajes vendidos: 5000.0
+Pasajeros: 2500.0
+Ganancias netas: 250000.0€
+
+Ciudad: BERLIN
+Turno:  mañana
+Pasajes vendidos: 6000.0
+Pasajeros: 3000.0
+Ganancias netas: 300000.0€
+
+Ciudad: Madrid
+Turno:  mañana
+Pasajes vendidos: 15000.0
+Pasajeros: 7500.0
+Ganancias netas: 750000.0€
+
+Ganancias Totales = 2300000.0€
