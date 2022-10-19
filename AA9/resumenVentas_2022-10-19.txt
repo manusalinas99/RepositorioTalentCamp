@@ -1,5 +1,0 @@
-Pasajeros Barcelona:10000.0
-Pasajeros Berlín:3000.0
-Pasajeros Madrid:2500.0
-Pasajeros Buenos Aires:7500.0
-Ganancias totales son:2300000.0€
