@@ -20,10 +20,6 @@ public class AOP
 	{
 		System.out.println("Calculando pasajeros");
 	}
-	@Before("execution(* emitirResumen(float,float,float,float,float))")
-	public void log3()
-	{
-		System.out.println("Emitiendo txt de resumen de pasajeros y ganancias");
-	}
+
 	
 }

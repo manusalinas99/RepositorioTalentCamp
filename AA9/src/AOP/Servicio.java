@@ -9,6 +9,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+//Servicio AOP con los métodos que calcula la ganancia y el num de pasajeros dependiendo 
+//del num de pasajes vendidos.
 @Service
 public class Servicio 
 {
@@ -21,26 +23,6 @@ public class Servicio
 		return pas/2;
 		
 	}
-	public void emitirResumen(float ganancia, float pasajerosBarc,float pasajerosBer,float pasajerosBue,float pasajerosMad) {
-				
-		 List<String> vuelo = new ArrayList(); 
-		 vuelo.add("Pasajeros Barcelona:" + pasajerosBarc);
-		 vuelo.add("Pasajeros Berlín:" + pasajerosBer);
-		 vuelo.add("Pasajeros Madrid:" + pasajerosMad);
-		 vuelo.add("Pasajeros Buenos Aires:" + pasajerosBue);
-		 vuelo.add("Ganancias totales son:" + ganancia + "€");
-		 
-		 
-		 String nombreArchivo = "resumenVentas_" + LocalDate.now() + ".txt";
-	 	 Path archivo = Paths.get(nombreArchivo);
-		  
-	 	try {
-			Files.write(archivo, vuelo, StandardCharsets.UTF_8);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		   
-	}
+	
 	
 }
