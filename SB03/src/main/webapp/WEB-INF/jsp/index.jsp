@@ -6,15 +6,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>COMIDA</title>
+<title>INDICE</title>
 </head>
 <body>
-       <c:out value="${comida}"/>
-  <select name="color" id="color">
-  <option value="r">Rojo</option>
-  <option value="a">Azul</option>
-  <option value="v">Verde</option>
-</select>
-<p><a href="index">Página de Inicio</a></p> 
+
+<p><a href="comida">COMIDA</a></p> 
+
+
 </body>
 </html>

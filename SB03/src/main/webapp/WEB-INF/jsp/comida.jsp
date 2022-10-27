@@ -9,12 +9,13 @@
 <title>COMIDA</title>
 </head>
 <body>
-       <c:out value="${comida}"/>
-  <select name="color" id="color">
-  <option value="r">Rojo</option>
-  <option value="a">Azul</option>
-  <option value="v">Verde</option>
-</select>
+
+
+<form action="generarArchivo" method="get">
+        Ingrediente: <input type="text" name="ingrediente"></br>
+        <input type="submit" value="Generar Archivo">
+ </form>
+    
 <p><a href="index">Página de Inicio</a></p> 
 </body>
 </html>

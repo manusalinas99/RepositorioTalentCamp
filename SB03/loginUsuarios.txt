@@ -1,0 +1,3 @@
+NombrePepe	apellido: Lopez		email: plopez@gmail.com	localidad: malaga	fecha nacimiento: 10/10/1990	
+NombreSaul	apellido: Rodirguez		email: srodriguez@gmail.com	localidad: madrid	fecha nacimiento: 10/01/1980	
+NombreLorena	apellido: Saez		email: lsaez@gmail.com	localidad: barcelona	fecha nacimiento: 20/10/1995	
