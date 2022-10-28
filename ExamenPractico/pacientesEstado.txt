@@ -1,0 +1,6 @@
+ID	Nombre	Fecha Nacimiento	Edad	Enfermedad	Valor Medicina	Seguro Médico	Esperanza	Recargo	Valor Final Medicina
+1	Gustavo	01/01/1990	32	Alergia	10	No posee	baja	No cobrar recargo	10	
+2	Carlos	01/05/1991	31	Salbutamul	15	Swiss Medical	media	Cobrar un recargo de 5%	15.75	
+3	Roxana	02/02/1991	31	Rosacea	25	Assist Card	media	Cobrar un recargo de 10%	27.5	
+4	Mariana	05/05/1992	30	Dolor de pierna	5	Swiss Medical	media	Cobrar un recargo de 5%	5.25	
+5	Rosalia	25/09/1992	30	Dolor de panza	3	No posee	media	No cobrar recargo	3	
